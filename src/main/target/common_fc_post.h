@@ -122,3 +122,5 @@
 #if defined(USE_FLASH_M25P16)
 #define USE_FLASH
 #endif
+
+#define USE_HOVERGAMES

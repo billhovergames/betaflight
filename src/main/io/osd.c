@@ -446,6 +446,16 @@ bool osdWarnGetState(uint8_t warningIndex)
     return osdConfig()->enabledWarnings & (1 << warningIndex);
 }
 
+void osdWriteString(uint8_t strposX, uint8_t strposY, char* buff)
+{
+    displayWrite(osdDisplayPort, strposX, strposY, buff);
+    /*
+    uint8_t buff_len = strlen(buff);
+    for(int i=0; i<buff_len; i++) {
+        displayWrite(osdDisplayPort, strposX + i, strposY, buff[i]);
+    }*/
+}
+
 static bool osdDrawSingleElement(uint8_t item)
 {
     if (!VISIBLE(osdConfig()->item_pos[item]) || BLINK(item)) {

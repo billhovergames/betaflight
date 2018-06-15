@@ -134,6 +134,9 @@ typedef enum {
     TASK_PINIOBOX,
 #endif
 
+#ifdef USE_HOVERGAMES
+    TASK_HOVERGAMES,
+#endif
     /* Count of real tasks */
     TASK_COUNT,
 

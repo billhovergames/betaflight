@@ -91,6 +91,8 @@
 
 #include "telemetry/telemetry.h"
 
+#include "game/hovergamesdisplay.h"
+
 #ifdef USE_USB_CDC_HID
 //TODO: Make it platform independent in the future
 #ifdef STM32F4
@@ -334,6 +336,11 @@ void fcTasksInit(void)
     setTaskEnabled(TASK_RCDEVICE, rcdeviceIsEnabled());
 #endif
 #endif
+
+#ifdef USE_HOVERGAMES
+setTaskEnabled(TASK_HOVERGAMES, true);
+#endif
+
 }
 
 cfTask_t cfTasks[TASK_COUNT] = {
@@ -596,4 +603,13 @@ cfTask_t cfTasks[TASK_COUNT] = {
     },
 #endif
 #endif
+
+    [TASK_HOVERGAMES] = {
+            .taskName = "HOVERGAMES",
+            .taskFunc = hovergamesUpdate,
+            .desiredPeriod = TASK_PERIOD_HZ(60),
+            .staticPriority = TASK_PRIORITY_HIGH
+    },
+
+
 };
