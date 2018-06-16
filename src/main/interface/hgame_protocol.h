@@ -1,0 +1,5 @@
+#pragma once
+
+#define HGAME_BAUDRATE 115200
+#define HGAME_PORT_MODE MODE_RXTX
+

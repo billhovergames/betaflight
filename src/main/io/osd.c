@@ -446,6 +446,10 @@ bool osdWarnGetState(uint8_t warningIndex)
     return osdConfig()->enabledWarnings & (1 << warningIndex);
 }
 
+void osdClearScreen() {
+    displayClearScreen(osdDisplayPort);
+}
+
 void osdWriteString(uint8_t strposX, uint8_t strposY, char* buff)
 {
     displayWrite(osdDisplayPort, strposX, strposY, buff);

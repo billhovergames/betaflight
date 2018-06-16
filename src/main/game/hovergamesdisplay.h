@@ -1,9 +1,8 @@
-#ifndef HOVERGAMESDISPLAY_H
-#define HOVERGAMESDISPLAY_H
+#pragma once
 
 #include "common/time.h"
+#include "interface/hgame_protocol.h"
 
 void hovergamesUpdate(timeUs_t currentTimeUs);
 
 
-#endif
