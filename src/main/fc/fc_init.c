@@ -134,6 +134,7 @@
 #include "io/vtx_control.h"
 #include "io/vtx_smartaudio.h"
 #include "io/vtx_tramp.h"
+#include "game/hovergamesdisplay.h"
 
 #include "scheduler/scheduler.h"
 
@@ -692,6 +693,8 @@ void init(void)
 #ifdef USE_VTX_TRAMP
     vtxTrampInit();
 #endif
+
+    hovergamesInit();
 
 #ifdef USE_VTX_RTC6705
 #ifdef VTX_RTC6705_OPTIONAL
