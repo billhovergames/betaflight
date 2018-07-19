@@ -134,7 +134,7 @@
 #include "io/vtx_control.h"
 #include "io/vtx_smartaudio.h"
 #include "io/vtx_tramp.h"
-#include "game/hovergamesdisplay.h"
+#include "game/hgSystem.h"
 
 #include "scheduler/scheduler.h"
 

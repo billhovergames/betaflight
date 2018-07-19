@@ -91,7 +91,7 @@
 
 #include "telemetry/telemetry.h"
 
-#include "game/hovergamesdisplay.h"
+#include "game/hgSystem.h"
 
 #ifdef USE_USB_CDC_HID
 //TODO: Make it platform independent in the future
